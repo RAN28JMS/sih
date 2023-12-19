@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evaluating Water Capacity</title>
+    <style>
+        /* Add some basic styling for the navbar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="left"><a href="wl.html">WL</a></div>
+        <a href="ds.html" class="center">DF</a>
+        <div class="right"><a href="fi.html">FIRE</a></div>
+    </nav>
+
+    <!-- Content -->
+    <h1>Evaluating Water Capacity</h1>
+    <hr>
+    <center>
+    <form>
+        <table border="1px">
+            <tr>
+                <td>S.No</td><td>Name</td><td>Full Depth</td><td>Average Depth</td><td>Current Point</td>
+            </tr>
+            <tr>
+                <td>1.</td><td>Krishna Raja Sagar</td><td>124.8Ft</td><td>62.4Ft</td><td>120Ft</td>
+            </tr>
+            <tr>
+                <td>2.</td><td>Kabini</td><td>65Ft</td><td>32.5Ft</td><td>60.5Ft</td>
+            </tr>
+            <tr>
+                <td>3.</td><td>Harangi</td><td>129Ft</td><td>64.5Ft</td><td>121.4Ft</td>
+            </tr>
+        </table>
+    </form>
+</center>
+    <!-- <center>
+        <form>
+            <?php
+            // Replace these database connection details with your own
+            $host = "localhost";
+            $username = "root";
+            $password = "root";
+            $database = "your_database_name";
+
+            // Create a PDO connection
+            try {
+                $conn = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $e) {
+                echo "Connection failed: " . $e->getMessage();
+                die();
+            }
+
+            // Fetch data from the database
+            $stmt = $conn->prepare("SELECT * FROM your_table_name");
+            $stmt->execute();
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if (count($results) > 0) {
+                echo '<table border="1px">';
+                echo '<tr><td>S.NO</td><td>Name</td><td>Full Depth</td><td>Ave Depth</td><td>Current Point</td></tr>';
+
+                foreach ($results as $index => $row) {
+                    echo '<tr>';
+                    echo '<td>' . ($index + 1) . '.</td>';
+                    echo '<td>' . $row['Name'] . '</td>';
+                    echo '<td>' . $row['FullDepth'] . '</td>';
+                    echo '<td>' . $row['AveDepth'] . '</td>';
+                    echo '<td>' . $row['CurrentPoint'] . '</td>';
+                    echo '</tr>';
+                }
+
+                echo '</table>';
+            } else {
+                echo 'No data available';
+            }
+            ?>
+        </form>
+    </center> -->
+    <!-- Your page content goes here -->
+
+</body>
+
+</html>
